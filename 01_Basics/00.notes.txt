@@ -5,7 +5,7 @@
 4.string
 5.Undefined (when the value is not assigned)
 6.Null (when the value is empty)
-7.Symbol (when value is unique)
+7.Symbol (makes value unique)
 8.Object
 
 2)"use strict" --> to activate js strict mode, used at the start of a js file(reduces some errors,exceptions and makes code run
@@ -25,4 +25,26 @@
 everything ahead of string is considered number so the operation takes place so (1+2=3),
 after the first string , everything is considered string  so (345)
 
-9)
+9) ** According to the way data is stored in memory and can be accessed , javascript divides
+datatypes into 2 categories --> 1.Primitive 2.Non-Primitive(reference)
+
+Primitive datatypes uses call by storage
+Primitive : String,Number,Boolean,null,Undefined,Bigint,Symbol (7)
+
+Non-Primitive datatypes uses call by reference
+Non-Primitive/reference : arrays,objects,functions (3)
+
+10) javascript is a dynamically typed language as the variable type does not need to be mentioned
+at the time of creation
+
+11)putting (n) behind a large number makes it bigint
+const bigNumber = 5156484165151561651561616n
+
+12)** javascript stores its data in 2 places : 1)stack memory and 2)Heap memory
+
+All Primitive datatypes are stored in Stack memory
+
+All reference datatypes are stored in heap memory
+
+13) Pass by reference means that -> if 2nd datatype is made by referencing 1st
+datatype, if the 2nd datatype changes the 1st one's value also changes
