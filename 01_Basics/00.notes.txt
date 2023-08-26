@@ -1,0 +1,23 @@
+1)datatypes of java script
+1.Number
+2.Bigint (for large numbers)
+3.Boolean
+4.string
+5.Undefined (when the value is not assigned)
+6.Null (when the value is empty)
+7.Symbol (when value is unique)
+8.Object
+
+2)"use strict" --> to activate js strict mode, used at the start of a js file(reduces some errors,exceptions and makes code run faster) it is not needed to be used for accessing modern features, but using it is good practise
+
+3)console.table([, ,]) --> for printing multiple things at once in a table format
+
+4)** (typeof null) --> will return object, just like (typeof object) will return object. This can cause confusion during coding. 
+
+5) NaN = Not a Number
+
+6)'arijit' can be typecasted as Number using --> Number('arijit'), but the value will be NaN(as it is not a number in reality)
+
+7) null will return 0 as value
+
+8) 
