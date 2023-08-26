@@ -8,7 +8,8 @@
 7.Symbol (when value is unique)
 8.Object
 
-2)"use strict" --> to activate js strict mode, used at the start of a js file(reduces some errors,exceptions and makes code run faster) it is not needed to be used for accessing modern features, but using it is good practise
+2)"use strict" --> to activate js strict mode, used at the start of a js file(reduces some errors,exceptions and makes code run
+ faster) it is not needed to be used for accessing modern features, but using it is good practise
 
 3)console.table([, ,]) --> for printing multiple things at once in a table format
 
@@ -20,4 +21,8 @@
 
 7) null will return 0 as value
 
-8) 
+8) console.log(1+2+'3'+4+5) --> will return 3345
+everything ahead of string is considered number so the operation takes place so (1+2=3),
+after the first string , everything is considered string  so (345)
+
+9)
