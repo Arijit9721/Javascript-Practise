@@ -48,3 +48,15 @@ All reference datatypes are stored in heap memory
 
 13) Pass by reference means that -> if 2nd datatype is made by referencing 1st
 datatype, if the 2nd datatype changes the 1st one's value also changes
+
+14) Proper way of writing string concatenation --> using `` and ${}
+${} are placeholders that are rrepalces with the value placed in between them
+this method is called -> String Interpolation
+
+15) using name string('') makes each alphabet into an induvidual object and makes running 
+a lot of functions on it possible. 
+
+To know all the possible functions availablerun the name string() 
+on browser console
+
+16) slice can take negative values but not substring
