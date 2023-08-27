@@ -1,0 +1,4 @@
+1) Months in js start with 0(0 indexed)
+
+2)** To convert miliseconds to seconds  --> divide miliseconds/1000 and then math.floor
+or math.round
