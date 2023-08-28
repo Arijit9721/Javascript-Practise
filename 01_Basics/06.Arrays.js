@@ -45,3 +45,24 @@ console.log(`The array after Splicing : ${testArray}`);
 // **Exception --> if the lower bound  of both slice and splice  is (0),the answer will be same. Ex- (0,3) in both will return same answer
 
 // 2. slice does not change the original array, Splice removes all elements in the range from the array 
+
+//  concatenating 2 arrays(old method)
+const marvel = ['Thor','Ironman','hulk']
+const dc = ['flash','superman','batman']
+const heroes = [marvel.concat(dc)]
+console.log(heroes);
+
+// Best way of concatenating --> through Spread method(...)
+const newHero = [...marvel,...dc]
+console.log(newHero);
+
+// to remove arrays inside arrays and make it a single array
+const  bigArray = [1,2,3,[4,5,6],7,8,[9,10,11,12,[13,14,15]]]
+const smallerArray = bigArray.flat(Infinity)
+console.log(smallerArray);
+
+//  converting other datatypes into array
+console.log(Array.from('arijit'))
+
+// converting multiple datatypes into arrays
+console.log(Array.of(1,2,'ram'))
