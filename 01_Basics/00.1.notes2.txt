@@ -2,3 +2,9 @@
 
 2)** To convert miliseconds to seconds  --> divide miliseconds/1000 and then math.floor
 or math.round
+
+3) slice runs before  range(if upper bound is 3,it goes till 2) ; Splice goes till range(if range is 3 , it goes till 3)
+Excepton --> if the lower bound  of both slice and splice  is 0,the answer will be same. Ex- (0,3) in both will return
+same answer
+
+4) slice does not change the original array, Splice does
