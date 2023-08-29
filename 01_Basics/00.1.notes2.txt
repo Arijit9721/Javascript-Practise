@@ -8,3 +8,11 @@ Excepton --> if the lower bound  of both slice and splice  is 0,the answer will 
 same answer
 
 4) slice does not change the original array, Splice does
+
+5) Object can 2 declared in 2 types :- 1.Through Literals 2.Through Constructor
+
+6)Literals :- Objects created using object literals are singletons. This means when a 
+change is made to the object, it affects that object across the entire script.
+
+7)Object defined with a function constructor let us have multiple instances of that
+ object. This means change made to one instance, will not affect other instances.
