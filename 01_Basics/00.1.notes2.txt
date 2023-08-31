@@ -16,3 +16,14 @@ change is made to the object, it affects that object across the entire script.
 
 7)Object defined with a function constructor let us have multiple instances of that
  object. This means change made to one instance, will not affect other instances.
+
+ 8)JavaScript Object Notation(JSON). It is a method of organizing data. Different
+  online apps communicate with one another using this format. It is the XML data 
+  interchange format’s successor. Compared to XML, the data is simple to structure.
+   It supports the JSON documents that are quickly performed on the server, as well as 
+   data structures like arrays and objects.
+
+9) Differences between Json and JavaScript Objects -->
+a. The keys in Json has to be double quoted, but not for objects
+b. Other languages can also generate json,but not javascript objects
+c. Functions are compatible with JavaScript Objects , but incompatible with JSON.
