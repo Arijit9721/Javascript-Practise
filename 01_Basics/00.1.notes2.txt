@@ -27,3 +27,6 @@ change is made to the object, it affects that object across the entire script.
 a. The keys in Json has to be double quoted, but not for objects
 b. Other languages can also generate json,but not javascript objects
 c. Functions are compatible with JavaScript Objects , but incompatible with JSON.
+
+10)when making Functions the values passed inside () are called Parameters.
+when calling the function the values passed inside () are called Arguments.
