@@ -41,3 +41,15 @@ A function can be called even before the function is declared in javascript.
 
 14) when a function is stored in a variable directly from creation, it is called function
 expression.The function cannot be called before the creation of the function expression.
+
+15) this function is used to reference current context
+
+16)printing (this) globally in IDE/Code editor will return blank ,as there is no 
+global context.
+printing (this) globally in browser will return Window ,as it records all context in that
+ window.
+
+17) (this) does not work in any functions and always returns undefined
+
+18) if the function is of a single line, () should be used instead of {} in arrow functions.
+ also return does not need to be used. this is called impicit return.
