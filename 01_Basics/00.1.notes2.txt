@@ -35,3 +35,9 @@ when calling the function the values passed inside () are called Arguments.
 The scope declared globally --> Global scope 
 
 12)Global scope is different in node and different in browser
+
+13) when a function is created by the normal method, it is called function declaration.
+A function can be called even before the function is declared in javascript. 
+
+14) when a function is stored in a variable directly from creation, it is called function
+expression.The function cannot be called before the creation of the function expression.
