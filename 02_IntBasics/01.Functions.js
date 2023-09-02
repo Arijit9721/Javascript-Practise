@@ -35,5 +35,27 @@ function userMess(username = 'guest'){
 } 
 console.log(userMess('ari'));
 console.log(userMess());
-// if username is incorrect the argument gusest will be taken
+// if username is incorrect the argument guest will be taken
 
+// when the number of parameters is unknown(rest parameter)
+function addToCart(...num1){
+    return console.log(num1);
+}
+addToCart(200,55,235,897)
+
+// passing objects in functions
+const newObj = {
+    item: 'keyboard',
+    price: 299
+}
+function priceChecker(anyData){
+    console.log(`the item is: ${anyData.item} and the price is: ${anyData.price}`);
+}
+priceChecker(newObj)
+
+// passing arrays in functions
+const priceArray = [254,955,1250,1987]
+function passArray(anyArray){
+    console.log(anyArray[1]);
+}
+passArray(priceArray)
