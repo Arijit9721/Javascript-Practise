@@ -1,0 +1,50 @@
+1) IIFE is used to immediately invoke a function .
+EX - you want to coonect to the database immediately, you use this method instead of the 
+old function declaration/expression method.
+
+2) IIFE is also used to prevent global scope pollution.
+
+3) ; is a must to use after second () in IIFE, as the next function will return error if 
+; is not used
+
+4)** Javascript is a single threaded language which means only one statement is executed at 
+a time. It means that just one line of code may be run at once.
+
+5) Javascript is single-threaded because, originally, it was only a web browser
+ scripting language created to serve the needs of a single user on a single window
+ of the browser, eliminating the need for multithreading.
+
+6) ** The enviroment that enables the JavaScript code to get executed is what we
+ call JavaScript Execution Context.
+    there are 3 execution contexts in javascript -->
+    1. Global execution context(GEC)        2. Function/functional execution context(FEC) 
+    3. Eval execution context(a part of global execution context and not that important)
+
+7) ** javascript runs in 2 phases --> 
+    1. Memory creation phase -> The phase where the memory for the program is allocated
+    2. Execution phase -> where the program is actually executed
+
+8) when a code is executed in javascript -->
+Step 1. Firstly, it creates a global object where it is for Node.js and Window object for
+ the browsers(GEC). It then references the object with (this) keyword.
+
+Step 2. Secondly, the memory creation phase takes place. A memory heap is created to store all
+the ariables and function references. It stores all the functions declarations in the
+ memory heap area and the variables in the GEC with initial values as 'undefined'.
+
+Step 3. Then the execution phase takes place, where all the variable are provided there
+correct data. during the execution of a function, a seperate execution context is created 
+to run a function. this is called Function/functional execution context .
+
+**  Everytime a FEC is created, a new enviroment is created. when that happens step 2
+ and step 3 are repeated for that function only, inside the enviroment. The result
+ from the execution is returned to the GEC. Once an FEC is completed  it is deleted.
+
+** The entire execution phase is done on call stack. So when a step is to be executed
+it goes on top of the stack and it is called for execution.when the step is completed
+it is removed from the stack. 
+Ex - when an FEC needs to be executed, it goes on top of the stack. Once it is completed,
+the FEC is then deleted.
+
+Step 4. At last, when the execution of the entire code gets completed, the JS engine
+ removes the GEC from the current stack.
