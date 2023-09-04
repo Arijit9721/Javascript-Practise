@@ -48,3 +48,9 @@ the FEC is then deleted.
 
 Step 4. At last, when the execution of the entire code gets completed, the JS engine
  removes the GEC from the current stack.
+
+9) Truthy values --> are values that return true when used in loops or conditionals
+    Falsy values --> are values that return false when used in loops or conditionals
+
+10) all Falsy values --> false,0,-0,bigint 0n,null,undefined,NaN,'',""
+    all other values are Truthy values, even '0','  ' or 'false' as these are inside a string

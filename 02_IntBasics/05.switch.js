@@ -43,3 +43,19 @@ switch (month) {
         console.log(`Not a valid month`);
         break;
 }
+
+// null coalesing operator (??)
+
+let a
+let b
+let c
+let d
+a = null ?? 10
+b = undefined ?? 10
+c = 5 ?? 10
+d = 10 ??  null
+console.log(a,b,c,d);
+
+// often in databases two values are returned. Using this operator, if one value is 
+// null or undefined , the other value is taken. If both values are not null or
+// undefined, the first value is taken.
