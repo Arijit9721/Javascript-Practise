@@ -7,10 +7,10 @@ old function declaration/expression method.
 3) ; is a must to use after second () in IIFE, as the next function will return error if 
 ; is not used
 
-4)** Javascript is a single threaded language which means only one statement is executed at 
+4)** javascript is a single threaded language which means only one statement is executed at 
 a time. It means that just one line of code may be run at once.
 
-5) Javascript is single-threaded because, originally, it was only a web browser
+5) javascript is single-threaded because, originally, it was only a web browser
  scripting language created to serve the needs of a single user on a single window
  of the browser, eliminating the need for multithreading.
 
