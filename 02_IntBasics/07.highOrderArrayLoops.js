@@ -50,3 +50,5 @@ const myheroes = [
 myheroes.forEach((item)=>{
     console.log(item.rank,item.name);
 })
+// for each loop does not return anything i.e, it can execute the function but wont
+// return the answer
