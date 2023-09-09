@@ -4,4 +4,18 @@ TextContent displays all the text at the selected region, even the text hidden w
 help of css.
 InnerHtml returns all the html along with the text of that selected region.
 
-4) queryselector retuns the first occurence of the selected query
+4) queryselector retuns the first occurence of the selected query. Classes are called
+by (.) and id are called by (#)
+
+5) queryselectorall  returns all the occurences of the requested query in the form
+ of a nodelist.
+
+6) A Nodelist is very similar to an array, except an array has much more prototype features
+than a Nodelist.
+
+7) An HTML Collection is similar to a Nodelist but with even less features including lack of 
+foreach loop
+
+8) Nodelists and HTML Collections are converted to arrays using method
+Array.from(Nodelist/HTML Collection stored in a variable)
+
