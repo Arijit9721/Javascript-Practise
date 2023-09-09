@@ -1,0 +1,18 @@
+The Document Object Model (DOM) is a programming interface for HTML(HyperText
+ Markup Language) and XML(Extensible markup language) documents. It defines the
+ logical structure of documents and the way a document is accessed and manipulated.
+
+ DOM is a way to represent the webpage in a structured hierarchical way so that it
+ will become easier for programmers and users to glide through the document. With DOM,
+ we can easily access and manipulate tags, IDs, classes, Attributes, or Elements 
+ of HTML using commands or methods provided by the Document object.
+
+ 2)Why is DOM required??
+ 
+ When an HTML file is loaded into the browser, the javascript can not understand the
+  HTML document directly. So, a corresponding document is created(DOM). DOM is 
+  basically the representation of the same HTML document but in a different format
+   with the use of objects. Javascript interprets DOM easily i.e javascript 
+   can not understand the tags(<h1>H</h1>) in HTML document but can understand 
+   object h1 in DOM. Now, Javascript can access each of the objects 
+   (h1, p, etc) by using different functions.

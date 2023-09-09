@@ -1,0 +1,7 @@
+1) Difference between InnerText,TextContent and InnerHtml in browser tools  -->
+InnerText displays all the text that is visible on that selected region of then website.
+TextContent displays all the text at the selected region, even the text hidden with the
+help of css.
+InnerHtml returns all the html along with the text of that selected region.
+
+4) queryselector retuns the first occurence of the selected query
