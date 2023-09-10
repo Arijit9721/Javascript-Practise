@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Mal3</title>
+</head>
+<body style="background-color: rgb(236, 218, 195);color: black;">
+    <ul class="language">
+        <li> javascript</li>
+    </ul>
+</body>
+<script>
+    // creating a function to add a new list
+function addlang(langName){
+const li =  document.createElement('li')
+li.appendChild(document.createTextNode(langName))
+document.querySelector('.language').appendChild(li)
+}
+addlang('java')
+addlang('python')
+
+// editing an element
+// 1. selecting the old element
+const secondLi =  document.querySelector('li:nth-child(2)')
+// 2. creating the new element to be edited
+const li =document.createElement('li')
+li.appendChild(document.createTextNode('typescript'))
+// 3.replacing old element with new one
+secondLi.replaceWith(li)
+
+// removing an element
+const lastLang = document.querySelector('li:last-child')
+lastLang.remove()
+</script>
+</html>
