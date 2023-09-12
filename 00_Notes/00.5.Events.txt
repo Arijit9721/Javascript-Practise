@@ -1,0 +1,4 @@
+Study topics in events:-
+a) type b) timestamp c) defaultPrevented d)target e) toElement 
+f) srcElement g)currentTarget h) screenX i)screenY j)clientX k)clientY
+l)offset m)keycode n)altkey o)shiftkey p)ctrlkey

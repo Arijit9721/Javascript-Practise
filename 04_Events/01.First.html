@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing images by the developer</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+// onclick is used to listen to the event of the element being clicked
+// onclick is not used today as it returns very little information
+
+  document.getElementById('owl').onclick = ()=> console.log('owl picture clicked')
+
+//  best approach is to use event listners
+// They are same as onclick but they listen to more events then just clicking 
+// the default for propogation is false so you dont need to mention it
+
+ document.getElementById('river').addEventListener('click',()=> console.log('picture of a river'),false)
+
+// **event Propogation
+
+// 1)Event Bubbling
+
+// selecting the entire ul
+document.getElementById('images').addEventListener('click',function(e){
+    console.log('an image is clicked');},false)
+// selecting a single image in the ul
+
+    document.getElementById('prayer').addEventListener('click',function(e){
+    console.log('the image is clicked');},false)
+// in the above example, when the prayer image is clicked, the console shows that
+// first the prayer event is triggered then the entire ul event is triggered .
+// this is called Event Bubbling. So from bottom layer the event bubbles up to the top layer.
+
+// 2)Event Capturing
+document.getElementById('images').addEventListener('click',function(e){
+    console.log('an image is clicked');},true)
+ document.getElementById('prayer').addEventListener('click',function(e){
+    console.log('the image is clicked');},true)
+// Event Capturing is the opposite of bubbling, the events are recooded from top to bottom.
+
+// 3) Stopping event propogation using stop Propogation
+document.getElementById('prayer').addEventListener('click',function(e){
+    console.log('the image is clicked');
+    e.stopPropagation()
+    },false)
+// now when the prayer image is clicked, only the image event will be recorded but not
+//  the ul event
+
+
+// Preventing the default actions by using preventDefault
+document.getElementById('google').addEventListener('click',function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Google is clicked');
+    },false)
+</script>
+</html>
