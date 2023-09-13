@@ -1,0 +1,70 @@
+1) javascript in default is a synchronous language, i.e, all the code is executed
+ one after the other.javascript is also single threaded, so in default is much 
+ slower compared to other languages.
+
+2) javascript is usually never available in default form, it is always executed with 
+a runtime enviroment.
+
+3)RunTime enviroment --> A runtime environment is the environment in which a program 
+or application is executed. It's the hardware and software infrastructure that 
+supports the running of a particular codebase in real time. Practically speaking,
+ a runtime environment is a piece of software that is designed to run
+  other software.
+ 
+4)How RunTime Works -->The runtime environment acts as the middleman between the 
+application andthe  operating system.As soon as a program is executed, the 
+runtime environment sends instructions to the computer's processor and RAM, 
+and accesses system resources.A runtime environment provides various basic 
+functions for memory, networks,and hardware.These functions are carried out
+ by the runtime environment instead of the application and work independently
+  of the OS.
+  
+5) RunTime could have their own runtime. Ex- JavaScript's runtime environment is Node,
+ and Node's runtime environment is the operating system.
+
+6) Blocking Code in javascript -->  let's say that a synchronous program performs a
+ task that requires waiting for a response for 5 seconds. The program will be 
+ stuck waiting for the response for those 5 seconds and cannot do anything else
+ until the response is returned. This is known as blocking, and it can lead
+ to an application appearing unresponsive or "frozen" to the user.
+
+7)Asynchronous JavaScript --> To solve this problem of blocking of code, asynchronous 
+javascript was introduced.Asynchronous programming is a way for a computer program 
+to handle multiple tasks simultaneously rather than executing them one after the other. 
+Asynchronous programming allows a program to continue working on other tasks while
+ waiting for external events, such as network requests, to occur. This approach can
+  greatly improve the performance and responsiveness of a program. Ex- The same code 
+written in async would keep on executing the remaining tasks in the call stack while
+waiting for the 5 second response.
+
+8)Non blocking code --> as async javascript doesnot block  the code , it is called Non 
+blocking code.
+
+9) A default javascript engine is made up of 2things -> Call stack and Memory Heap.
+ As the default engine is very slow, normmally javascript is usually run inside a 
+ Browser or a runtime. In a Browser, it calls the WebAPI and in a runtime it calls the
+ runtime's API(NODE API ).
+
+ 10) Register CallBack --> everytime an asynchronous code is run, the coe gets registered 
+ for execution in the Register CallBack. Ex- when yoy call a timeout of 5 seconds,
+ it gets immedietly recorded in the Register CallBack and gets executed after 5 secs.
+
+ 11) Task Queue --> Task Queue is a Queue for storing the registered callbacks. Like 
+ the name suggests, it is a Queue data structure so new entries get put at the
+ end and new entries are at the front. whenever a task needs to be executed, the 
+ task Queue automatically puts it at the top of the call stack for execution with the 
+ help of event loop.
+ Ex- after the end of 5 seconds, the timeout code will automatically be put at the top of 
+ the stack for execution.
+
+ 12)Event Loop -->The Event Loop in JavaScript is a mechanism that keeps checking
+  whether the call stack is empty. If it is, it takes the first task from the
+  Task Queue and pushes it to the Call Stack. It's an infinite loop responsible
+  for executing queued code snippets at appropriate times, hence the name 'Event Loop.'  
+
+13) These tasks can be divided into 2 types :- a) Macro tasks b) Micro tasks
+Macro tasks are  tasks that have low priority(like events,timeouts,set Intervals)
+Micro tasks are tasks  that have high priority(promises)
+
+14)Macro tasks are stored in Task queue(CallBack queue)
+  Micro tasks are stored in Microtask queue(Job queue)
