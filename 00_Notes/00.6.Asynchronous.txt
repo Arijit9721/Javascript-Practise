@@ -68,3 +68,13 @@ Micro tasks are tasks  that have high priority(promises)
 
 14)Macro tasks are stored in Task queue(CallBack queue)
   Micro tasks are stored in Microtask queue(Job queue)
+
+15) setTimeout does it's assigned task only once after the
+aforementioned time has passed.
+setInterval does it's assigned task every time the set time passes.
+
+16)ClearTimeout removes the timeout but takes the name of the 
+variable in which timeout is stored. so the timeout must
+ be stored in a variable. 
+ ClearInterval removes inervals and also requires intervals to be stored
+ in variables.

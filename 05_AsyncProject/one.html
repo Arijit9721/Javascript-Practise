@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Project</title>
+</head>
+<body>
+    <h1>Async Project</h1>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    // set timout(does the task once after the time has passed)
+    setTimeout(function(){
+        console.log('arijit');
+    },5000)
+
+    // setInterval(does the every time the time has passed)
+        setInterval(function(){
+            const date = new Date().toLocaleTimeString()
+           // console.log(date);
+        },2000)
+
+    // change h1 name to coder name with a 2 sec timeout
+    let name = document.querySelector('h1')
+     const time = setTimeout(function(){
+        name.innerHTML = 'Arijit das'
+     },5000)   
+
+    //  stopping name from changing with clear timeout
+    const button = document.getElementById('stop')
+    button.addEventListener('click',function(){
+        clearTimeout(time)
+    })
+    // the setTimeout must be stored in a varible for  cleartimeout() to work
+
+</script>
+</html>

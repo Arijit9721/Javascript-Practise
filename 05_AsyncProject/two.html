@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async Second Project</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+// Linking setInterval and ClearInterval with 2 Buttons
+
+let call ;
+
+const start = function inter(){
+    call = setInterval(function(){
+    console.log('arijit',Date.now());
+    },2000)
+   }
+
+const stop = function outer(){
+    clearInterval(call)
+}
+document.getElementById('start').addEventListener('click',start)
+document.getElementById('stop').addEventListener('click',stop)
+
+</script>
+</html>
