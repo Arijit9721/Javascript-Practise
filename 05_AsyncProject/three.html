@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
+        >Youtube channel</a
+      >
+    </nav>
+
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script src="chaiaurcode.js"></script>
+  </body>
+  <script>
+    // Change the Bgcolor every second on click of start button
+// stop this on click of stop button
+
+// Creating a random color with hex code
+const randomColor = function (){
+    const hex = '0123456789ABCDEF';
+    let color = '#';
+    for(let i=0;i<8;i++){
+        color += hex[Math.floor(Math.random() * 16)]
+    }
+    return color;
+};
+// changing the bgcolor
+const changeBgColor =  function(){
+    document.body.style.backgroundColor = randomColor()
+}
+
+// creating a setInterval
+let int;
+
+const inter = function(){
+// stopping the error from multi-clicking of the start button
+    if(int == null){
+    int = setInterval(changeBgColor,1000)
+}
+}
+
+// creating clear Interval
+
+const stopInter =  function(){
+    clearInterval(int)
+// making the  int null to make the code more optimised
+    int = null;
+}
+
+// linking them to buttons
+
+document.querySelector('#start').addEventListener('click',inter)
+document.querySelector('#stop').addEventListener('click',stopInter)
+
+</script>
+</html>
