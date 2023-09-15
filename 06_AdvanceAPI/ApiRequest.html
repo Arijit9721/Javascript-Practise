@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+</head>
+<body style = "background-color: #212121;">
+<button style= "background-color: white;" id="call">Get Info</button>
+</body>
+<script>
+    // making an XML HTTP Request(old code only for fun)
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+     const request = new XMLHttpRequest();
+     request.open('GET', requestUrl)
+
+    // Contineous tracking of the state of the request
+        request.onreadystatechange = function(){ 
+        console.log(request.readyState) 
+        // finding info from data
+        if (true) {
+         const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+         console.log(data.followers);
+    }
+}
+    // sending the request
+    request.send()
+
+
+    
+</script>
+</html>
