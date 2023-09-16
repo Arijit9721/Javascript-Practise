@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> API Project </title>
+</head>
+<body style="background-color: rgba(192, 55, 55, 0.966);color: rgba(35, 189, 150, 0.856);">
+    <div>
+    <h1>Display the details of the creator</h1>
+</div>
+<script>
+    // make a button which displays the follower count and image from github
+    //  make it by making an api request to github
+    
+    // selecting the body
+    const body = document.body
+
+    // creating a div for the button
+    const div = document.createElement('div')
+    div.setAttribute('id','mainDiv')
+    body.appendChild(div)
+
+    // creating the Show Info button
+    const button = document.createElement('button')
+    button.innerHTML = 'Get Info'
+    button.style.backgroundColor='#181818';
+    button.style.color='white'
+    button.style.height='40px';
+    button.style.textAlign='center';
+    button.style.position='fixed';
+    button.style.left='35%';
+    button.style.top='4%';
+    div.appendChild(button)
+    
+    // calling the information
+    const webApi = 'https://api.github.com/users/hiteshchoudhary'
+    const request = new XMLHttpRequest()
+    request.open('GET',webApi)
+    request.send()
+    
+    // creating the heading a box
+    const div2 = document.createElement('div')
+    div2.setAttribute('id','boxDiv')
+    div2.style.color='white'
+    div2.style.backgroundColor = '#FEA730'
+    div2.style.height = '30px'
+    div2.innerHTML= ' Info of The User'
+    div2.style.textAlign='center';
+
+    // creating the inside of the box 
+    const div3 = document.createElement('div')
+    div3.setAttribute('id','boxDiv')
+    div3.style.color='black'
+    div3.style.backgroundColor = 'white'
+    div3.style.height = '180px'
+    request.onreadystatechange = function(){
+        if(request.readyState === 4) {
+         const data = JSON.parse(this.responseText)
+         const Name = document.createTextNode(`The Name of the User: ${data.login}  `)
+         const Id = document.createTextNode(`The Id of the User: ${data.id}  `)
+         const Followers = document.createTextNode(`The Number of Followers: ${data.followers}   `)
+         const profilePic = document.createElement('img')
+         profilePic.src =  data.avatar_url
+         profilePic.style.position='fixed';
+         profilePic.style.height = '160px';
+         profilePic.style.top ='19%';
+         profilePic.style.left ='70%';
+         div3.appendChild(profilePic)
+         div3.appendChild(Name)
+         div3.appendChild(Id)
+         div3.appendChild(Followers)
+    }
+    }
+
+    // button events
+    let click;
+    button.addEventListener('click',function(){
+    if(click == null){
+    body.appendChild(div2)
+    body.appendChild(div3)
+    click =1
+    }
+    else{
+        body.removeChild(div2)
+        body.removeChild(div3)
+        click = null
+    }
+    })
+    
+   
+
+
+</script>
+</html>
