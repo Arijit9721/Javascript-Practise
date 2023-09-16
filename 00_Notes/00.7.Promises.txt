@@ -1,0 +1,29 @@
+Promise -->The Promise object represents the eventual completion (or failure) of an asynchronous 
+operation and its resulting value.A Promise is a special JavaScript object. It produces a value 
+after an asynchronous (aka, async) operation completes successfully, or an error if it does not 
+complete successfully due to time out, network error, and so on. 
+
+2)A Promise is in one of these states:
+
+    pending: initial state, neither fulfilled nor rejected.
+    fulfilled: meaning that the operation was completed successfully.
+    rejected: meaning that the operation failed.
+
+3)Promise can be used for Database calls,Network Operations,Cryptography etc.
+
+4) Creation -> resolve, consumption -> .then()
+   Creation -> reject, consumption -> .catch()
+
+5) The task in .then() and .catch() will always be done before the task in the 
+actual promise.
+
+6) In chanining, the lower promises wil get it's callback results from the
+promise just above it.
+
+7)finally is a default command which will be executed regardless the promise
+ was resolved or rejected.It is used to show that the execution of the promise
+ is done.
+
+8) async await is similar to then-catch but it uses try-catch.so the then is 
+replaced by try.
+
