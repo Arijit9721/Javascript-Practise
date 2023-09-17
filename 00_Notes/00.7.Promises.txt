@@ -27,3 +27,6 @@ promise just above it.
 8) async await is similar to then-catch but it uses try-catch.so the then is 
 replaced by try.
 
+9)** Network Errors like error404,error201 etc. are also  categorised as responses.
+so they will be stored in .then() rather than .catch(). Only absolute errors which
+return nothing will be stored in .catch(). 

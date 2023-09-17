@@ -1,0 +1,22 @@
+
+Fetch--> It is a global method that provides an easy, logical way to fetch resources 
+asynchronously across the network.The fetch() method in JavaScript is used to request 
+data from a server. The request can be of any type of API that returns the data in 
+JSON or XML. The fetch() method requires one parameter, the URL to request, and returns
+ a promise.
+
+2) When a fetch method is executed, it returns a promise. So it is always recorded 
+in the microtask queue.
+
+3)** Inner Workings of Fetch method --> when the fetch method is called, it executes
+2 jobs -> Firstly,it creates an empty memory block and  2 empty arrays(onFulfilled[]
+and onRejection[]). Secondly, it calls upon the Web/Node API and sends a network request
+for  receiving the information.
+
+Once the request returns a response,whether resolve or reject, it gets stored either
+at onFulfilled[] or onRejection[] array. These arrays have a  inbuilt function which
+allows them to store this response in the empty memory bock and then the memory block
+is stored in the global memory and it bbecomes the final response.
+
+4) onFulfilled[],onRejection[] and the empty memory block all work behind the scenes
+and so they cannot be accessed by the user.

@@ -94,10 +94,3 @@ async function sixth(){
 }
 sixth();
 
-fetch('https://api.github.com/users/hiteshchoudhary')
-.then((response)=>{
-    return response.json()
-}).then((call)=>{
-    console.log(call);
-})
-.catch((error)=>console.log('ERROR:Something Went Wrong'))
