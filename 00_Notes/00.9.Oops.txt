@@ -1,0 +1,23 @@
+Does javascript have classes?
+
+Classes were introduced in EcmaScript 2015 (ES6) to provide a cleaner way to 
+ follow object-oriented programming patterns.The introduction of classes in JS 
+ made it easier for developers to build software around OOP concepts. It also
+  brought in similarities to different OOP-based programming languages such as
+   C++ and Java.
+
+ But in reality,JavaScript still follows a prototype-based 
+   inheritance model. Classes in JavaScript are syntactic sugar over the 
+   prototype-based inheritance model which we use to implement OOP concepts. 
+
+So even though javascript has classes, it actually runs differently than
+   other class based languages with class based inheritance, as it has a
+   prototype based nature under the hood.
+
+2)The Four Pillars of Object Oriented Programming
+
+    Abstraction.
+    Encapsulation.
+    Inheritance.
+    Polymorphism.
+
