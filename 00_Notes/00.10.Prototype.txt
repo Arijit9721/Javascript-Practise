@@ -1,0 +1,18 @@
+1) What is a prototype?
+
+In JavaScript, objects can inherit features from one another via prototypes. Every 
+object has its own property called prototype.Its is a special hidden property.
+
+Because a prototype itself is also another object, the prototype has its own prototype.
+ This creates a something called prototype chain. The prototype chain ends when a 
+ prototype has null for its own prototype.
+
+[[Prototype]] is a special hidden property in JavaScript objects, but because it
+ cannot be directly accessed, it can be accessed through the __proto__ access method.
+
+2) what is prototypal inheritance?
+
+Every type of datatype in javascript like arrays,functions etc. eventually inherits
+ it's  prototype features from an object.This creates the prototypal chain and This
+ chain continues till the prototype has null for its own prototype.This is called prototypal
+ inheritance and why "everything in javascript is an object".
